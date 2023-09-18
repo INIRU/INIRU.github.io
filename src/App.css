@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&family=Kanit:ital,wght@1,600&family=Noto+Sans+KR:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root[color-theme='light'] {
+  --navbar-bg: #e5e5e5;
+  --text-color: #000000;
+  --text-hover: #6f6e6e;
+  --body-bg: #f0f0f0;
+
+  /** code color*/
+  --color-white: #767676;
+  --color-purple: #8261ec;
+  --color-yellow: #455cf1;
+  --color--blue: #66aaf2;
+  --color-semi: #5cabb3;
+  --cursor-color: #2c2c2e;
+  --soical-color: #66aaf2;
+  --html-tag-color: #ec6073;
+  --html-lt-color: #5cabb3;
+  --skill-bg-color: #ffffff;
+  --overlay-color: rgba(255, 255, 255, 0.3);
+  --level-color: rgba(0, 0, 0, 0.7);
+  --inline-bg: #d9d9d9;
+  --app-link: rgb(237, 245, 254);
+  --app-link-text: rgb(43, 102, 202);
+  --a-link-text: rgb(0, 108, 231);
+  --ar-color: rgba(0, 0, 0, 0.7);
+}
+
+:root[color-theme='dark'] {
+  --navbar-bg: #2c2c2e;
+  --text-color: #ffffff;
+  --text-hover: #cbcbcb;
+  --body-bg: #2d2f32;
+
+  /** code color*/
+  --color-white: #ffffff;
+  --color-purple: #c04f8a;
+  --color-yellow: #e0b859;
+  --color--blue: #5183b7;
+  --color-semi: #9cdafa;
+  --cursor-color: #ffffff;
+  --soical-color: #5183b7;
+  --html-tag-color: #cf5d5a;
+  --html-lt-color: #ffffff;
+  --skill-bg-color: #383939;
+  --overlay-color: rgba(0, 0, 0, 0.3);
+  --level-color: rgba(255, 255, 255, 0.7);
+  --inline-bg: #454545;
+  --app-link: rgb(183, 213, 247);
+  --app-link-text: rgb(43, 102, 202);
+  --a-link-text: rgb(0, 168, 252);
+  --ar-color: rgba(0, 0, 0, 0.7);
+}
+
+body {
+  font-family: 'Noto Sans KR', sans-serif !important;
+}
+
+/** Navbar */
+
+.navbar-container {
+  height: 56px;
+}
+
+.navbar {
+  background-color: var(--navbar-bg) !important;
+  position: absolute;
+}
+
+.navbar-brand {
+  color: var(--text-color);
+  font-weight: 600;
+  letter-spacing: -0.7px;
+}
+
+.navbar-brand:hover {
+  color: var(--text-hover);
+}
+
+.nav-link {
+  color: var(--text-hover) !important;
+}
+
+.light {
+  transform: rotateY(0deg);
+}
+
+.dark {
+  transform: rotateY(180deg);
+}
