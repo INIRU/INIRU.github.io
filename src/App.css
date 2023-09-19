@@ -21,11 +21,9 @@
   --skill-bg-color: #ffffff;
   --overlay-color: rgba(255, 255, 255, 0.3);
   --level-color: rgba(0, 0, 0, 0.7);
-  --inline-bg: #d9d9d9;
-  --app-link: rgb(237, 245, 254);
-  --app-link-text: rgb(43, 102, 202);
-  --a-link-text: rgb(0, 108, 231);
-  --ar-color: rgba(0, 0, 0, 0.7);
+  --drop-color: #ffffff;
+  --drop-hover: #f8f9fa;
+  --drop-border: #d5d5d5;
 }
 
 :root[data-color-mode='dark'] {
@@ -33,7 +31,7 @@
   --text-color: #ffffff;
   --text-hover: #cbcbcb;
   --body-bg: #2d2f32;
-  --bar-color: rgb(0, 108, 231);
+  --bar-color: #006ce7;
 
   /** code color*/
   --code-white: #ffffff;
@@ -49,11 +47,9 @@
   --skill-bg-color: #383939;
   --overlay-color: rgba(0, 0, 0, 0.3);
   --level-color: rgba(255, 255, 255, 0.7);
-  --inline-bg: #454545;
-  --app-link: rgb(183, 213, 247);
-  --app-link-text: rgb(43, 102, 202);
-  --a-link-text: rgb(0, 168, 252);
-  --ar-color: rgba(0, 0, 0, 0.7);
+  --drop-color: #212529;
+  --drop-hover: #2c3035;
+  --drop-border: #4b4b4d;
 }
 
 body {
@@ -137,6 +133,63 @@ body {
 
 .nav-link {
   color: var(--text-hover) !important;
+}
+
+.selector {
+  height: 100%;
+  width: 140px;
+  border-radius: 7px;
+  color: var(--text-color);
+  background-color: rgb(61, 61, 61);
+  font-weight: 500;
+  cursor: pointer;
+  position: relative;
+
+  .icon {
+    font-size: 20px;
+    pointer-events: none;
+    transform: rotate(-90deg);
+    transition: transform 0.2s ease;
+  }
+
+  .icon.active {
+    transform: rotate(0deg);
+  }
+
+  .selector-list {
+    width: inherit;
+    max-height: 220px;
+    position: absolute;
+    top: 100%;
+    left: 0px;
+    border-radius: 7px;
+    background-color: rgb(61, 61, 61);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(0);
+    overflow: hidden;
+    overflow-y: auto;
+    transition: 0.3s ease;
+  }
+
+  .selector-list.active {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(15%);
+  }
+
+  .selector-item {
+    list-style: none;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 7px 6px;
+    text-transform: capitalize;
+    cursor: pointer;
+  }
+
+  .selector-item:hover {
+    background-color: rgb(85, 85, 85);
+  }
 }
 
 /** Info Style */
@@ -237,6 +290,10 @@ body {
   margin: auto;
 }
 
+.skill-wave {
+  z-index: -1;
+}
+
 .badge-text {
   font-family: 'Fira Code', sans-serif !important;
   letter-spacing: 0px;
@@ -249,7 +306,6 @@ body {
   height: 100%;
   background-color: var(--overlay-color);
   opacity: 0;
-  border-radius: inherit;
   transition: all 0.5s;
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);

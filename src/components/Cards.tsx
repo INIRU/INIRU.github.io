@@ -1,4 +1,7 @@
 import { useState } from 'react';
+import { useSelector } from 'react-redux';
+import Wave from 'react-wavify';
+import { RootState } from '..';
 
 type Skill = {
   name: string;
@@ -8,6 +11,8 @@ type Skill = {
 };
 
 function SkillCard(props: Skill): JSX.Element {
+  let state = useSelector((state: RootState) => state);
+
   let [border, setBorder] = useState(0);
   let [level, setLevel] = useState(0);
 
@@ -37,6 +42,16 @@ function SkillCard(props: Skill): JSX.Element {
       }}
       className="skill-item d-flex shadow-sm justify-content-center align-items-center position-relative"
     >
+      <Wave
+        fill={state.isDarkMode ? 'var(--code-value)' : 'var(--code-value)'}
+        className="skill-wave position-absolute bottom-0 h-100"
+        options={{
+          height: 100 - props.level,
+          amplitude: 20,
+          speed: 0.25,
+          points: 2,
+        }}
+      />
       <div className="overlay w-100 position-absolute d-flex justify-content-center">
         <p className="level text-center align-self-center">{level}%</p>
       </div>
