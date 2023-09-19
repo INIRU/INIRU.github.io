@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { Navbar, Nav, Container } from 'react-bootstrap';
 import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from '..';
@@ -41,7 +41,7 @@ function NavBar(): JSX.Element {
           </Nav>
           <div className="navbar-mode dark">
             <DarkModeSwitch
-              size={30}
+              size={25}
               checked={state.isDarkMode.value}
               onChange={toggleDarkMode}
             />
