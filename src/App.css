@@ -92,6 +92,22 @@ body {
   height: 230px;
 }
 
+.info-field {
+  font-weight: 600;
+  font-size: 20px;
+  color: var(--text-color);
+}
+
+.info-image-flexbox {
+  width: 300px;
+  height: 300px;
+}
+
+.info-image {
+  width: inherit !important;
+  height: inherit !important;
+}
+
 /** Info Code */
 
 .info-code {

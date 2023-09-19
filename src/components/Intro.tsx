@@ -1,6 +1,7 @@
 import { Container } from 'react-bootstrap';
 import { typing, erase, wait } from '../modules/hangul';
 import { useEffect, useState } from 'react';
+import { Button } from 'react-bootstrap';
 
 function Intro(): JSX.Element {
   let [name, setName] = useState('');
@@ -26,7 +27,7 @@ function Intro(): JSX.Element {
   }, []);
 
   return (
-    <div className="info-container shadow-lg">
+    <div className="info-container shadow-lg ps-2">
       <Container className="h-100">
         <div className="d-flex justify-content-around h-100">
           <div className="info-text-container w-50">
@@ -38,6 +39,25 @@ function Intro(): JSX.Element {
                 <span className="code-semi">;</span>
               </span>
             </code>
+            <div className="info-field">
+              <p>
+                Web Front-End & Python
+                <br />
+                Developer
+              </p>
+            </div>
+            <Button variant="outline-primary" className="mt-1 border-2">
+              node contect.js
+            </Button>
+          </div>
+          <div className="info-image-container position-relative w-100 h-100 d-flex justify-content-end">
+            <div className="info-image-flexbox position-absolute bottom-0 z-1">
+              <img
+                className="info-image position-absolute bottom-0 z-0"
+                src={process.env.PUBLIC_URL + '/INIRU.png'}
+                alt=""
+              />
+            </div>
           </div>
         </div>
       </Container>
