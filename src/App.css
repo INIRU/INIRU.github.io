@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&family=Kanit:ital,wght@1,600&family=Noto+Sans+KR:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
-:root[color-theme='light'] {
+:root[data-color-mode='light'] {
   --navbar-bg: #e5e5e5;
   --text-color: #000000;
   --text-hover: #6f6e6e;
@@ -12,6 +12,7 @@
   --code-yellow: #455cf1;
   --code-value: #66aaf2;
   --code-semi: #5cabb3;
+
   --cursor-color: #2c2c2e;
   --soical-color: #66aaf2;
   --html-tag-color: #ec6073;
@@ -26,11 +27,12 @@
   --ar-color: rgba(0, 0, 0, 0.7);
 }
 
-:root[color-theme='dark'] {
+:root[data-color-mode='dark'] {
   --navbar-bg: #2c2c2e;
   --text-color: #ffffff;
   --text-hover: #cbcbcb;
   --body-bg: #2d2f32;
+  --bar-color: rgb(0, 108, 231);
 
   /** code color*/
   --code-white: #ffffff;
@@ -38,6 +40,7 @@
   --code-yellow: #e0b859;
   --code-value: #5183b7;
   --code-semi: #9cdafa;
+
   --cursor-color: #ffffff;
   --soical-color: #5183b7;
   --html-tag-color: #cf5d5a;
@@ -55,8 +58,25 @@
 body {
   font-family: 'Noto Sans KR', sans-serif !important;
   box-sizing: border-box;
-  font-family: 'Noto Sans KR', sans-serif;
   background-color: var(--body-bg);
+  color: var(--text-color);
+}
+
+/** Markdown Viewer */
+
+.wmde-markdown {
+  --color-canvas-default: none !important;
+  font-family: 'Noto Sans KR', sans-serif !important;
+}
+
+.wmde-markdown code {
+  color: var(--text-color);
+  padding: 2.5px 5px !important;
+  font-family: 'Fira Code', sans-serif !important;
+}
+
+.wmde-markdown strong {
+  font-weight: 700 !important;
 }
 
 /** Navbar */
@@ -111,7 +131,7 @@ body {
 /** Info Code */
 
 .info-code {
-  font-family: 'Fira Code', monospace;
+  font-family: 'Fira Code', monospace !important;
   font-weight: 800;
   letter-spacing: -2px;
   font-size: 32px;
@@ -146,6 +166,36 @@ body {
   margin-left: 0.42rem;
   border-right: 2px solid var(--cursor-color);
   animation: 0.7s cursor infinite steps(1);
+}
+
+/** About Style */
+.about-title {
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.about-bar {
+  border-bottom: 2px solid var(--bar-color);
+  height: 15px;
+  width: 40px;
+}
+
+.about-text-container {
+  font-size: 20px;
+}
+
+.about-md {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+.about-md code {
+  font-size: 20px !important;
+}
+
+.md-yellow {
+  color: var(--code-yellow) !important;
 }
 
 @keyframes cursor {

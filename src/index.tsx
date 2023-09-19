@@ -8,6 +8,8 @@ import { Provider } from 'react-redux';
 import store from './store';
 import ThemeProvider from './components/Theme';
 
+import './i18n';
+
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );

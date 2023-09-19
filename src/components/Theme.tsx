@@ -7,7 +7,7 @@ function ThemeProvider({ children }: any): JSX.Element {
 
   useLayoutEffect(() => {
     document.documentElement.setAttribute(
-      'color-theme',
+      'data-color-mode',
       state.isDarkMode.value ? 'dark' : 'light'
     );
   }, [state.isDarkMode]);

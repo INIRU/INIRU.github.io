@@ -46,7 +46,7 @@ function Intro(): JSX.Element {
                 Developer
               </p>
             </div>
-            <Button variant="outline-primary" className="mt-1 border-2">
+            <Button variant="outline-primary" className="mt-3 border-2">
               node contect.js
             </Button>
           </div>
