@@ -122,6 +122,7 @@ body {
 .navbar {
   background-color: var(--navbar-bg) !important;
   position: absolute;
+  z-index: 2;
 }
 
 .navbar-brand {
@@ -153,8 +154,9 @@ body {
 }
 
 .info-image-flexbox {
-  width: 300px;
-  height: 300px;
+  width: 255px;
+  height: 255px;
+  z-index: 0;
 }
 
 .info-image {

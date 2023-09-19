@@ -7,7 +7,7 @@ type Skill = {
   level: number;
 };
 
-function Badge(props: Skill): JSX.Element {
+function SkillCard(props: Skill): JSX.Element {
   let [border, setBorder] = useState(0);
   let [level, setLevel] = useState(0);
 
@@ -52,4 +52,4 @@ function Badge(props: Skill): JSX.Element {
   );
 }
 
-export default Badge;
+export default SkillCard;

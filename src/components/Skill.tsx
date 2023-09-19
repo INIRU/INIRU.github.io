@@ -1,6 +1,6 @@
 import { Container } from 'react-bootstrap';
 import info from '../database/info';
-import Badge from './Badge';
+import SkillCard from './Cards';
 
 function Skill(): JSX.Element {
   return (
@@ -9,14 +9,15 @@ function Skill(): JSX.Element {
         &lt;<span className="code-html-tag">Skills</span>&gt;
       </h2>
       <div className="d-flex justify-content-center gap-4 mt-3 mb-3 flex-wrap w-100">
-        {info['skills'].map((data): JSX.Element => {
+        {info['skills'].map((data, i): JSX.Element => {
           return (
-            <Badge
+            <SkillCard
               name={data.name}
               id={data.id}
               color={data.color}
               level={data.level}
-            ></Badge>
+              key={i}
+            ></SkillCard>
           );
         })}
       </div>
