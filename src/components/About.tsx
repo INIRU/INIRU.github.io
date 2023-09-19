@@ -3,9 +3,7 @@ import { useTranslation } from 'react-i18next';
 import MarkdownPreview from '@uiw/react-markdown-preview';
 
 function About(): JSX.Element {
-  const { t, i18n } = useTranslation();
-
-  console.log(i18n.resolvedLanguage);
+  const { t } = useTranslation();
 
   return (
     <Container className="w-100">
