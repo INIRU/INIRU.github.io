@@ -2,6 +2,8 @@ import { useState } from 'react';
 import { useSelector } from 'react-redux';
 import Wave from 'react-wavify';
 import { RootState } from '..';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLink } from '@fortawesome/free-solid-svg-icons';
 
 type Skill = {
   name: string;
@@ -67,4 +69,19 @@ function SkillCard(props: Skill): JSX.Element {
   );
 }
 
-export default SkillCard;
+function RepoCard(props: { data: { [key: string]: string } }): JSX.Element {
+  return (
+    <div className="repo-item p-4 shadow-sm d-flex flex-column justify-content-around text-center">
+      <h4 className="repo-name">{props.data.name.replaceAll('-', ' ')}</h4>
+      <p className="repo-desc">{props.data.description}</p>
+      <div className="d-flex justify-content-center">
+        <button className="repo-link p-2 gap-1 d-flex align-items-center shadow-sm">
+          <FontAwesomeIcon icon={faLink} />
+          <a href={props.data.html_url}>github.com</a>
+        </button>
+      </div>
+    </div>
+  );
+}
+
+export { SkillCard, RepoCard };

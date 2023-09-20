@@ -6,7 +6,7 @@ import { setDarkMode } from '../store';
 import { DarkModeSwitch } from 'react-toggle-dark-mode';
 import Selector from './Selector';
 
-function NavBar(): JSX.Element {
+function NavBar(props: { up: boolean; view: string }): JSX.Element {
   let [image, setImage] = useState<string>('.png');
   let state = useSelector((state: RootState) => state);
   let dispatch = useDispatch();
@@ -17,7 +17,11 @@ function NavBar(): JSX.Element {
 
   return (
     <div className="navbar-container position-relative w-100">
-      <Navbar className="navbar bg-body-tertiary w-100 h-100 ps-4 pe-4">
+      <Navbar
+        className={`navbar bg-body-tertiary w-100 ps-4 pe-4 ${props.view} ${
+          props.up ? 'nav-up' : ''
+        }`}
+      >
         <Navbar.Brand
           href="#home"
           onMouseOver={() => {

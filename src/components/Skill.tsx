@@ -1,6 +1,6 @@
 import { Container } from 'react-bootstrap';
 import info from '../database/info';
-import SkillCard from './Cards';
+import { SkillCard } from './Cards';
 
 function Skill(): JSX.Element {
   return (

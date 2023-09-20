@@ -33,20 +33,23 @@ function Selector(): JSX.Element {
       </span>
 
       <div className={`selector-list ${openSelector ? 'active' : null}`}>
-        {Object.keys(langs).map((data: string): JSX.Element | null => {
-          if (data === i18n.resolvedLanguage) return null;
+        {Object.keys(langs).map(
+          (data: string, i: number): JSX.Element | null => {
+            if (data === i18n.resolvedLanguage) return null;
 
-          return (
-            <li
-              className="selector-item"
-              onClick={() => {
-                i18n.changeLanguage(data);
-              }}
-            >
-              {langs[data]}
-            </li>
-          );
-        })}
+            return (
+              <li
+                key={i}
+                className="selector-item"
+                onClick={() => {
+                  i18n.changeLanguage(data);
+                }}
+              >
+                {langs[data]}
+              </li>
+            );
+          }
+        )}
       </div>
     </div>
   );
