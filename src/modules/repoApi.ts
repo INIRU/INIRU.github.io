@@ -3,6 +3,7 @@ import axios, { AxiosResponse } from 'axios';
 let url = 'https://api.github.com/users/INIRU/repos';
 
 function repoApi(): Promise<AxiosResponse<any>> {
+  console.log(process.env.REACT_APP_GIT_TOKEN);
   return axios({
     url: url,
     headers: {
