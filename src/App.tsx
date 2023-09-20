@@ -1,10 +1,11 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, lazy } from 'react';
 import NavBar from './components/Nav';
 import Intro from './components/Intro';
 import About from './components/About';
-import Skill from './components/Skill';
-import Repo from './components/Repositories';
 import './App.css';
+
+const Skill = lazy(() => import('./components/Skill'));
+const Repo = lazy(() => import('./components/Repositories'));
 
 let lastScrollTop = 0;
 
