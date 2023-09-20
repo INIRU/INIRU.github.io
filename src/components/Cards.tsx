@@ -73,7 +73,11 @@ function RepoCard(props: { data: { [key: string]: string } }): JSX.Element {
   return (
     <div className="repo-item p-4 shadow-sm d-flex flex-column justify-content-around text-center">
       <h4 className="repo-name">{props.data.name.replaceAll('-', ' ')}</h4>
-      <p className="repo-desc">{props.data.description}</p>
+      <p className="repo-desc">
+        {props.data.description.length >= 70
+          ? props.data.description.substr(0, 70) + '...'
+          : props.data.description}
+      </p>
       <div className="d-flex justify-content-center">
         <button className="repo-link p-2 gap-1 d-flex align-items-center shadow-sm">
           <FontAwesomeIcon icon={faLink} />

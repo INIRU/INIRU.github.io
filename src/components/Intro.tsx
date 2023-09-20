@@ -29,8 +29,8 @@ function Intro(): JSX.Element {
   return (
     <div className="info-container shadow-lg ps-2">
       <Container className="h-100">
-        <div className="d-flex justify-content-around h-100">
-          <div className="info-text-container w-50">
+        <div className="d-flex justify-content-around h-100 pt-2">
+          <div className="info-text-container w-100">
             <code className="info-code">
               <span className="code-white">I'm</span>{' '}
               <span className="code-purple">{'=>'}</span>{' '}
@@ -46,11 +46,14 @@ function Intro(): JSX.Element {
                 Developer
               </p>
             </div>
-            <Button variant="outline-primary" className="mt-3 border-2">
+            <Button
+              variant="outline-primary"
+              className="mt-3 border-2 info-btn"
+            >
               node contect.js
             </Button>
           </div>
-          <div className="info-image-container position-relative w-100 h-100 d-flex justify-content-end">
+          <div className="info-image-container position-relative h-100 d-flex justify-content-end">
             <div className="info-image-flexbox position-absolute bottom-0 z-1">
               <img
                 className="info-image position-absolute bottom-0 z-0"

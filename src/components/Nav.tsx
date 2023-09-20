@@ -23,6 +23,7 @@ function NavBar(props: { up: boolean; view: string }): JSX.Element {
         }`}
       >
         <Navbar.Brand
+          className="d-flex align-items-center gap-1"
           href="#home"
           onMouseOver={() => {
             setImage('.gif');
@@ -46,7 +47,6 @@ function NavBar(props: { up: boolean; view: string }): JSX.Element {
         <div className="d-flex gap-4 align-items-center h-100">
           <Selector />
           <DarkModeSwitch
-            size={25}
             checked={state.isDarkMode.value}
             onChange={toggleDarkMode}
           />
