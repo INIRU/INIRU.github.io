@@ -137,6 +137,7 @@ a {
 
 .code-class {
   color: var(--code-class);
+  font-size: 35px;
 }
 
 .code-html {
@@ -491,6 +492,11 @@ a {
     font-size: 35px;
   }
 
+  .code-class {
+    color: var(--code-class);
+    font-size: 30px;
+  }
+
   .repo-item {
     width: 330px;
     height: 230px;
@@ -566,7 +572,12 @@ a {
   }
 
   .code-html {
-    font-size: 32px;
+    font-size: 28px;
+  }
+
+  .code-class {
+    color: var(--code-class);
+    font-size: 23px;
   }
 
   .skill-item {
@@ -580,6 +591,10 @@ a {
 
   .level {
     font-size: 38px;
+  }
+
+  .collpase-icon {
+    font-size: 20px;
   }
 }
 
@@ -660,5 +675,18 @@ a {
 
   .level {
     font-size: 33px;
+  }
+
+  .code-html {
+    font-size: 23px;
+  }
+
+  .code-class {
+    color: var(--code-class);
+    font-size: 18px;
+  }
+
+  .collpase-icon {
+    font-size: 18px;
   }
 }
