@@ -3,8 +3,11 @@ import { Alert } from 'react-bootstrap';
 import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from '..';
 import { setViewer } from '../store';
+import { useTranslation } from 'react-i18next';
 
 function Viewer(): JSX.Element {
+  const { t } = useTranslation();
+
   let [alert, setAlert] = useState(false);
   let state = useSelector((state: RootState) => state);
   let dispatch = useDispatch();
@@ -33,7 +36,7 @@ function Viewer(): JSX.Element {
           alert ? 'active' : ''
         }`}
       >
-        검은 바탕을 클릭하여 Viewer를 종료할 수 있습니다.
+        {t('viewer')}
       </Alert>
       <img className="viewer-image" src={state.isViewer.value} alt="" />
     </div>
