@@ -3,7 +3,6 @@ import { Alert } from 'react-bootstrap';
 import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from '..';
 import { setViewer } from '../store';
-import { Container } from 'react-bootstrap';
 
 function Viewer(): JSX.Element {
   let [alert, setAlert] = useState(false);

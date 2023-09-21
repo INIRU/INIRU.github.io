@@ -185,6 +185,7 @@ a {
   color: var(--text-color);
   font-weight: 600;
   letter-spacing: -0.7px;
+  margin-right: 0px;
 }
 
 .navbar-brand:hover {

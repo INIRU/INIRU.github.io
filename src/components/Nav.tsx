@@ -21,9 +21,9 @@ function NavBar(props: { up: boolean; view: string }): JSX.Element {
   return (
     <div className="navbar-container position-relative w-100">
       <Navbar
-        className={`navbar bg-body-tertiary w-100 ps-4 pe-4 ${props.view} ${
-          props.up ? 'nav-up' : ''
-        }`}
+        className={`d-flex align-items-center gap-1 navbar bg-body-tertiary w-100 ps-4 pe-4 ${
+          props.view
+        } ${props.up ? 'nav-up' : ''}`}
       >
         <Navbar.Brand
           className="d-flex align-items-center gap-1"
