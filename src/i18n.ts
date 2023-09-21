@@ -7,6 +7,7 @@ i18n
   .use(initReactI18next)
   .init({
     debug: true,
+    lng: 'en',
     fallbackLng: 'en',
     interpolation: {
       escapeValue: false,
@@ -23,8 +24,16 @@ i18n
       ko: {
         translation: {
           about: `안녕하세요. 저는 **\`Web Front-End 개발자\`<!--rehype:class=md-yellow-->** 를 꿈꾸고 있는 고등학생 개발자 입니다.
-          \n저는 \`HTML\` 과 \`CSS\` 그리고 \`JavaScript\`를 유연하게 다룰 수 있으며. **React**와 **TypeScript** 그리고 **Next.js**는 공부중 입니다.
+          \n저는 \`HTML\` 과 \`CSS\` 그리고 \`JavaScript\`를 유연하게 다룰 수 있으며, **React**와 **TypeScript** 그리고 **Next.js**는 공부중 입니다.
           \n항상 앞으로 나아갈 미래를 만드는 **개발자**가 되겠습니다.
+          `,
+        },
+      },
+      jp: {
+        translation: {
+          about: `こんにちは。私は **\`Web Front-End Developer\`<!--rehype:class=md-yellow-->** を夢見る高校生開発者です。
+          \n私は \`HTML\` と \`CSS\` そして \`JavaScript\`を柔軟に扱うことができ、 **React** と **TypeScript** そして **Next.js** は勉強中です。
+          \n常に前へ進む未来を作る開発者になりたいと思います。
           `,
         },
       },

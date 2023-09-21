@@ -41,7 +41,7 @@ function NavBar(props: { up: boolean; view: string }): JSX.Element {
           INIRU
         </Navbar.Brand>
         <Nav className="me-auto navbar-link">
-          <Nav.Link>Blog</Nav.Link>
+          <Nav.Link href="https://iniru.github.io/portfolio-old">Old</Nav.Link>
         </Nav>
 
         <div className="d-flex gap-4 align-items-center h-100">

@@ -10,6 +10,7 @@ function Selector(): JSX.Element {
   let langs: { [key: string]: string } = {
     ko: '한국어',
     en: 'English',
+    jp: '日本語',
   };
 
   return (
