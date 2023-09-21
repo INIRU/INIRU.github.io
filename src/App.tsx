@@ -1,7 +1,9 @@
 import React, { useEffect, useState, lazy } from 'react';
+import { Route, Routes } from 'react-router-dom';
 import NavBar from './components/Nav';
 import Intro from './components/Intro';
 import About from './components/About';
+import Reward from './components/Reward';
 import './App.css';
 
 const Skill = lazy(() => import('./components/Skill'));
@@ -47,9 +49,19 @@ function App(): JSX.Element {
     <div className="App">
       <NavBar up={up} view={view}></NavBar>
       <Intro></Intro>
-      <About></About>
-      <Skill></Skill>
-      <Repo></Repo>
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <>
+              <About></About>
+              <Skill></Skill>
+              <Repo></Repo>
+            </>
+          }
+        />
+        <Route path="/reward" element={<Reward></Reward>} />
+      </Routes>
     </div>
   );
 }

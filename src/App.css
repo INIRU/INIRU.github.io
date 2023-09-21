@@ -429,6 +429,21 @@ a {
   transform: scale(1.1);
 }
 
+.reward-image {
+  width: 250px;
+  transition: transform 0.3s ease-out;
+}
+
+.reward-image:hover {
+  transform: scale(1.1);
+}
+
+.image-viewer {
+  background-color: var(--overlay-color);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+
 @keyframes cursor {
   0% {
     opacity: 1;
