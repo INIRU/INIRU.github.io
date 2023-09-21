@@ -41,6 +41,7 @@
   --code-yellow: #e0b859;
   --code-value: #5183b7;
   --code-semi: #9cdafa;
+  --code-class: rgb(186, 149, 225);
   --html-tag-color: #cf5d5a;
   --html-lt-color: #ffffff;
 
@@ -70,6 +71,30 @@ a {
 
 .loding-image {
   width: 300px;
+}
+
+.collpase {
+  height: 0px !important;
+  overflow: hidden;
+}
+
+.collpase-icon {
+  font-size: 25px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.collpase-icon.dummy {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.collpase-icon:hover {
+  transform: scale(1.1);
+}
+
+.collpase-icon.close {
+  transform: rotate(-90deg);
 }
 
 /** Markdown Viewer */
@@ -108,6 +133,10 @@ a {
 
 .code-value {
   color: var(--code-value);
+}
+
+.code-class {
+  color: var(--code-class);
 }
 
 .code-html {
@@ -296,6 +325,10 @@ a {
 }
 
 /** Skill Style*/
+.skill-list {
+  transition: height 0.3s;
+}
+
 .skill-item {
   width: 165px;
   height: 165px;
@@ -353,6 +386,11 @@ a {
   height: 270px;
   border-radius: 15px;
   background-color: var(--skill-bg-color);
+  transition: transform 0.3s ease;
+}
+
+.repo-item:hover {
+  transform: translateY(-13px);
 }
 
 .repo-list {
@@ -527,7 +565,7 @@ a {
     font-size: 12.5px !important;
   }
 
-  .html-tag {
+  .code-html {
     font-size: 32px;
   }
 
@@ -556,5 +594,71 @@ a {
   .info-image-flexbox {
     width: 150px;
     height: 150px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .navbar-brand {
+    font-size: 15px !important;
+  }
+
+  .nav-image {
+    width: 25px;
+  }
+
+  .nav-mode {
+    width: 18px;
+  }
+
+  .selector {
+    width: 70px;
+    font-size: 12px;
+
+    .icon {
+      font-size: 10px;
+    }
+
+    .selector-item {
+      font-size: 10px;
+    }
+  }
+
+  .info-code {
+    font-size: 20px;
+  }
+
+  .info-image-flexbox {
+    width: 130px;
+    height: 130px;
+  }
+
+  .info-field {
+    font-size: 13px;
+  }
+
+  .info-btn {
+    border-width: 1px !important;
+    font-size: 12px;
+  }
+
+  .info-container {
+    height: 160px;
+  }
+
+  .skill-item {
+    width: 135px;
+    height: 135px;
+  }
+
+  .skill-item-icon {
+    width: 65px;
+  }
+
+  .badge-text {
+    font-size: 17px;
+  }
+
+  .level {
+    font-size: 33px;
   }
 }

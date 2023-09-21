@@ -36,7 +36,7 @@ function NavBar(props: { up: boolean; view: string }): JSX.Element {
             alt=""
             src={process.env.PUBLIC_URL + '/INIRU' + image}
             width="30"
-            className="d-inline-block align-top"
+            className="d-inline-block align-top nav-image"
           />{' '}
           INIRU
         </Navbar.Brand>
@@ -47,6 +47,7 @@ function NavBar(props: { up: boolean; view: string }): JSX.Element {
         <div className="d-flex gap-4 align-items-center h-100">
           <Selector />
           <DarkModeSwitch
+            className="nav-mode"
             checked={state.isDarkMode.value}
             onChange={toggleDarkMode}
           />

@@ -11,7 +11,7 @@ function Intro(): JSX.Element {
       async (state): Promise<void> => {
         await wait(2000);
         await erase(state, setName, 100);
-        await wait(1000);
+        await wait(500);
         i += 1;
         if (i === letter.length) {
           i = 0;
