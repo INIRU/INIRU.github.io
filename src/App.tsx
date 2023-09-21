@@ -4,7 +4,10 @@ import NavBar from './components/Nav';
 import Intro from './components/Intro';
 import About from './components/About';
 import Reward from './components/Reward';
+import Viewer from './components/Viewer';
 import './App.css';
+import { useSelector } from 'react-redux';
+import { RootState } from '.';
 
 const Skill = lazy(() => import('./components/Skill'));
 const Repo = lazy(() => import('./components/Repositories'));
@@ -12,6 +15,7 @@ const Repo = lazy(() => import('./components/Repositories'));
 let lastScrollTop = 0;
 
 function App(): JSX.Element {
+  let state = useSelector((state: RootState) => state);
   let [up, setUp] = useState(false);
   let [view, setView] = useState('');
 
@@ -47,6 +51,7 @@ function App(): JSX.Element {
 
   return (
     <div className="App">
+      {state.isViewer.value ? <Viewer /> : null}
       <NavBar up={up} view={view}></NavBar>
       <Intro></Intro>
       <Routes>

@@ -12,10 +12,24 @@ let isDarkMode = createSlice({
   },
 });
 
+let isViewer = createSlice({
+  name: 'isViewer',
+  initialState: {
+    value: '',
+  },
+  reducers: {
+    setViewer(state, action: PayloadAction<string>) {
+      state['value'] = action.payload;
+    },
+  },
+});
+
 export let { setDarkMode } = isDarkMode.actions;
+export let { setViewer } = isViewer.actions;
 
 export default configureStore({
   reducer: {
     isDarkMode: isDarkMode.reducer,
+    isViewer: isViewer.reducer,
   },
 });

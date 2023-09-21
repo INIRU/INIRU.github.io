@@ -444,6 +444,22 @@ a {
   -webkit-backdrop-filter: blur(5px);
 }
 
+.viewer-image {
+  width: 500px;
+}
+
+.viewer-alert {
+  transition: all 0.7s ease;
+  opacity: 0;
+  transform: translateY(-30px);
+  font-size: 90%;
+}
+
+.viewer-alert.active {
+  opacity: 1;
+  transform: translateY(0px);
+}
+
 @keyframes cursor {
   0% {
     opacity: 1;
@@ -504,12 +520,12 @@ a {
   }
 
   .code-html {
-    font-size: 35px;
+    font-size: 38px;
   }
 
   .code-class {
     color: var(--code-class);
-    font-size: 30px;
+    font-size: 33px;
   }
 
   .repo-item {
@@ -587,12 +603,12 @@ a {
   }
 
   .code-html {
-    font-size: 28px;
+    font-size: 31px;
   }
 
   .code-class {
     color: var(--code-class);
-    font-size: 23px;
+    font-size: 26px;
   }
 
   .skill-item {
@@ -611,6 +627,10 @@ a {
   .collpase-icon {
     font-size: 20px;
   }
+
+  .viewer-image {
+    width: 300px;
+  }
 }
 
 @media screen and (max-width: 690px) {
@@ -624,6 +644,10 @@ a {
   .info-image-flexbox {
     width: 150px;
     height: 150px;
+  }
+
+  .viewer-alert {
+    font-size: 80%;
   }
 }
 
@@ -693,12 +717,12 @@ a {
   }
 
   .code-html {
-    font-size: 23px;
+    font-size: 28px;
   }
 
   .code-class {
     color: var(--code-class);
-    font-size: 18px;
+    font-size: 23px;
   }
 
   .collpase-icon {
