@@ -1,13 +1,22 @@
 import React, { useEffect, useState, lazy } from 'react';
 import { Route, Routes } from 'react-router-dom';
+import {
+  isSafari,
+  isChrome,
+  isEdge,
+  isFirefox,
+  isChromium,
+} from 'react-device-detect';
 import NavBar from './components/Nav';
 import Intro from './components/Intro';
 import About from './components/About';
 import Reward from './components/Reward';
 import Viewer from './components/Viewer';
+import Modal from './components/Modal';
 import './App.css';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from '.';
+import { setWarningModal } from './store';
 
 const Skill = lazy(() => import('./components/Skill'));
 const Repo = lazy(() => import('./components/Repositories'));
@@ -16,8 +25,15 @@ let lastScrollTop = 0;
 
 function App(): JSX.Element {
   let state = useSelector((state: RootState) => state);
+  let dispatch = useDispatch();
   let [up, setUp] = useState(false);
   let [view, setView] = useState('');
+
+  function Browser(): void {
+    if (!(isSafari || isChrome || isEdge || isFirefox || isChromium)) {
+      dispatch(setWarningModal('browserCom'));
+    }
+  }
 
   function NavScrollEvent() {
     let { pageYOffset } = window;
@@ -42,15 +58,17 @@ function App(): JSX.Element {
   }
 
   useEffect(() => {
+    Browser();
     window.addEventListener('scroll', NavScrollEvent);
 
     return () => {
       window.removeEventListener('scroll', NavScrollEvent);
     };
-  });
+  }, []);
 
   return (
     <div className="App">
+      {state.isWarningModal.value ? <Modal /> : null}
       {state.isViewer.value ? <Viewer /> : null}
       <NavBar up={up} view={view}></NavBar>
       <Intro></Intro>

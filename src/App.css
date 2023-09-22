@@ -461,6 +461,20 @@ a {
   transform: translateY(0px);
 }
 
+.modal-container {
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  z-index: 10;
+}
+
+.modal-frame {
+  width: 55%;
+  height: 50%;
+  border: 2px solid var(--drop-hover);
+  border-radius: 15px;
+  background-color: var(--navbar-bg);
+}
+
 @keyframes cursor {
   0% {
     opacity: 1;
@@ -631,6 +645,14 @@ a {
 
   .viewer-image {
     width: 300px;
+  }
+
+  .alert-heading {
+    font-size: 17px !important;
+  }
+
+  .alert-desc {
+    font-size: 12px;
   }
 }
 

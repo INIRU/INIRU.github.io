@@ -24,12 +24,24 @@ let isViewer = createSlice({
   },
 });
 
+let isWarningModal = createSlice({
+  name: 'isWarningModal',
+  initialState: { value: '' },
+  reducers: {
+    setWarningModal(state, action: PayloadAction<string>) {
+      state['value'] = action.payload;
+    },
+  },
+});
+
 export let { setDarkMode } = isDarkMode.actions;
 export let { setViewer } = isViewer.actions;
+export let { setWarningModal } = isWarningModal.actions;
 
 export default configureStore({
   reducer: {
     isDarkMode: isDarkMode.reducer,
     isViewer: isViewer.reducer,
+    isWarningModal: isWarningModal.reducer,
   },
 });
