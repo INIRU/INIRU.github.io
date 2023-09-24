@@ -206,52 +206,52 @@ a {
   font-weight: 500;
   cursor: pointer;
   position: relative;
+}
 
-  .icon {
-    font-size: 20px;
-    pointer-events: none;
-    transform: rotate(-90deg);
-    transition: transform 0.2s ease;
-  }
+.icon {
+  font-size: 20px;
+  pointer-events: none;
+  transform: rotate(-90deg);
+  transition: transform 0.2s ease;
+}
 
-  .icon.active {
-    transform: rotate(0deg);
-  }
+.icon.active {
+  transform: rotate(0deg);
+}
 
-  .selector-list {
-    width: inherit;
-    max-height: 220px;
-    position: absolute;
-    top: 100%;
-    left: 0px;
-    border-radius: 7px;
-    background-color: var(--drop-color);
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(0);
-    overflow: hidden;
-    overflow-y: auto;
-    transition: 0.3s ease;
-  }
+.selector-list {
+  width: inherit;
+  max-height: 220px;
+  position: absolute;
+  top: 100%;
+  left: 0px;
+  border-radius: 7px;
+  background-color: var(--drop-color);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(0);
+  overflow: hidden;
+  overflow-y: auto;
+  transition: 0.3s ease;
+}
 
-  .selector-list.active {
-    visibility: visible;
-    opacity: 1;
-    transform: translateY(15%);
-  }
+.selector-list.active {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(15%);
+}
 
-  .selector-item {
-    list-style: none;
-    font-size: 15px;
-    font-weight: 500;
-    padding: 7px 6px;
-    text-transform: capitalize;
-    cursor: pointer;
-  }
+.selector-item {
+  list-style: none;
+  font-size: 15px;
+  font-weight: 500;
+  padding: 7px 6px;
+  text-transform: capitalize;
+  cursor: pointer;
+}
 
-  .selector-item:hover {
-    background-color: var(--drop-hover);
-  }
+.selector-item:hover {
+  background-color: var(--drop-hover);
 }
 
 /** Info Style */
@@ -345,9 +345,10 @@ a {
 
 .skill-item:hover {
   transform: scale(1.125);
-  .overlay {
-    opacity: 1;
-  }
+}
+
+.skill-item:hover .overlay {
+  opacity: 1;
 }
 
 .skill-item-icon {
@@ -492,14 +493,14 @@ a {
   .selector {
     width: 120px;
     font-size: 14px;
+  }
 
-    .icon {
-      font-size: 15px;
-    }
+  .icon {
+    font-size: 15px;
+  }
 
-    .selector-item {
-      font-size: 13px;
-    }
+  .selector-item {
+    font-size: 13px;
   }
 
   .info-container {
@@ -574,14 +575,14 @@ a {
   .selector {
     width: 90px;
     font-size: 13px;
+  }
 
-    .icon {
-      font-size: 14px;
-    }
+  .icon {
+    font-size: 14px;
+  }
 
-    .selector-item {
-      font-size: 11px;
-    }
+  .selector-item {
+    font-size: 11px;
   }
 
   .info-code {
@@ -691,14 +692,14 @@ a {
   .selector {
     width: 70px;
     font-size: 12px;
+  }
 
-    .icon {
-      font-size: 10px;
-    }
+  .icon {
+    font-size: 10px;
+  }
 
-    .selector-item {
-      font-size: 10px;
-    }
+  .selector-item {
+    font-size: 10px;
   }
 
   .info-code {
