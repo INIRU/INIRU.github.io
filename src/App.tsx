@@ -40,9 +40,9 @@ function App(): JSX.Element {
     if (pageYOffset >= 300) {
       setUp(true);
 
-      if (pageYOffset - lastScrollTop <= -10) {
+      if (pageYOffset - lastScrollTop <= -10 && view !== 'nav-view') {
         setView('nav-view');
-      } else if (pageYOffset - lastScrollTop >= 10 && view === 'nav-view') {
+      } else if (pageYOffset > lastScrollTop && view === 'nav-view') {
         setView('nav-hide');
       }
       lastScrollTop = pageYOffset <= 0 ? 0 : pageYOffset;
@@ -64,7 +64,7 @@ function App(): JSX.Element {
     return () => {
       window.removeEventListener('scroll', NavScrollEvent);
     };
-  }, []);
+  }, [view]);
 
   return (
     <div className="App">
