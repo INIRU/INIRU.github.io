@@ -27,6 +27,7 @@ function NavBar(props: { up: boolean; view: string }): JSX.Element {
       >
         <Navbar.Brand
           className="d-flex align-items-center gap-1"
+          href="#home"
           onClick={() => {
             navigate('/');
           }}
