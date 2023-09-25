@@ -59,6 +59,9 @@ function App(): JSX.Element {
 
   useEffect(() => {
     Browser();
+  }, []);
+
+  useEffect(() => {
     window.addEventListener('scroll', NavScrollEvent);
 
     return () => {
