@@ -21,7 +21,7 @@ export type RootState = ReturnType<typeof store.getState>;
 root.render(
   <React.StrictMode>
     <Provider store={store}>
-      <BrowserRouter>
+      <BrowserRouter basename={process.env.PUBLIC_URL}>
         <Suspense fallback={<Loading></Loading>}>
           <ThemeProvider>
             <App />
