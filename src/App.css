@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&family=Kanit:ital,wght@1,600&family=Noto+Sans+KR:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&family=Kanit:ital,wght@1,600&family=Noto+Sans+JP:wght@100;200;300;400;500;600;700;800;900&family=Noto+Sans+KR:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 :root[data-color-mode='light'] {
   --navbar-bg: #e5e5e5;
@@ -59,7 +59,7 @@
 }
 
 body {
-  font-family: 'Noto Sans KR', sans-serif !important;
+  font-family: 'Noto Sans KR', 'Noto Sans JP', sans-serif !important;
   box-sizing: border-box;
   background-color: var(--body-bg);
   color: var(--text-color);
@@ -68,10 +68,6 @@ body {
 a {
   text-decoration: none;
   color: inherit;
-}
-
-li {
-  list-style: none;
 }
 
 .loding-image {
@@ -502,7 +498,7 @@ li {
 }
 
 .menu-animation {
-  gap: 7.5px;
+  gap: 6.5px;
 }
 
 .menu-btn {
@@ -541,7 +537,7 @@ li {
 }
 
 .menu-bar.active:nth-child(1) {
-  top: 9.5px;
+  top: 8.5px;
   transform: rotate(-45deg);
   transition: top 0.3s ease 0.1s, transform 0.3s ease-out 0.5s;
 }
@@ -551,9 +547,29 @@ li {
 }
 
 .menu-bar.active:nth-child(3) {
-  top: -9.5px;
+  top: -8.5px;
   transform: rotate(45deg);
   transition: top 0.3s ease 0.1s, transform 0.3s ease-out 0.5s;
+}
+
+.footer-me {
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+.footer-social {
+  width: 70px;
+  height: 70px;
+  border-radius: 25%;
+  font-size: 32px;
+  background-color: var(--skill-bg-color);
+  cursor: pointer;
+  transition: transform 0.25s ease-out;
+  color: var(--code-value) !important;
+}
+
+.footer-social:hover {
+  transform: scale(1.1);
 }
 
 @keyframes cursor {

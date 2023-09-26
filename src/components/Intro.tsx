@@ -49,6 +49,9 @@ function Intro(): JSX.Element {
             <Button
               variant="outline-primary"
               className="mt-3 border-2 info-btn"
+              onClick={() => {
+                window.scrollTo({ top: document.documentElement.scrollHeight });
+              }}
             >
               node contect.js
             </Button>

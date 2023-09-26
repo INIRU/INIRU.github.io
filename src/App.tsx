@@ -22,6 +22,7 @@ import Redirect from './components/Redirect';
 
 const Skill = lazy(() => import('./components/Skill'));
 const Repo = lazy(() => import('./components/Repositories'));
+const Footer = lazy(() => import('./components/Footer'));
 
 let lastScrollTop = 0;
 
@@ -93,6 +94,7 @@ function App(): JSX.Element {
               <About></About>
               <Skill></Skill>
               <Repo></Repo>
+              <Footer></Footer>
             </>
           }
         />
