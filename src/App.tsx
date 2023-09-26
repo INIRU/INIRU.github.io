@@ -30,7 +30,7 @@ function App(): JSX.Element {
   let dispatch = useDispatch();
   let [up, setUp] = useState(false);
   let [view, setView] = useState('');
-  let [windowWidth, setWindowWidth] = useState(0);
+  let [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   function Browser(): void {
     if (!(isSafari || isChrome || isEdge || isFirefox || isChromium)) {
