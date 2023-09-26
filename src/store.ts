@@ -34,6 +34,15 @@ let isWarningModal = createSlice({
   },
 });
 
+let isMenuList = createSlice({
+  name: 'isMenuList',
+  initialState: [
+    { name: 'Reward', link: '/reward' },
+    { name: 'Old', redirect: 'https://iniru.github.io/portfolio-old' },
+  ],
+  reducers: {},
+});
+
 export let { setDarkMode } = isDarkMode.actions;
 export let { setViewer } = isViewer.actions;
 export let { setWarningModal } = isWarningModal.actions;
@@ -43,5 +52,6 @@ export default configureStore({
     isDarkMode: isDarkMode.reducer,
     isViewer: isViewer.reducer,
     isWarningModal: isWarningModal.reducer,
+    isMenuList: isMenuList.reducer,
   },
 });

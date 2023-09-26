@@ -6,8 +6,13 @@ import { setDarkMode } from '../store';
 import { DarkModeSwitch } from 'react-toggle-dark-mode';
 import Selector from './Selector';
 import { useNavigate } from 'react-router-dom';
+import Menu from './Menu';
 
-function NavBar(props: { up: boolean; view: string }): JSX.Element {
+function NavBar(props: {
+  up: boolean;
+  view: string;
+  windowWidth: number;
+}): JSX.Element {
   const navigate = useNavigate();
 
   let [image, setImage] = useState<string>('.png');
@@ -27,7 +32,6 @@ function NavBar(props: { up: boolean; view: string }): JSX.Element {
       >
         <Navbar.Brand
           className="d-flex align-items-center gap-1"
-          href="#home"
           onClick={() => {
             navigate('/');
           }}
@@ -47,23 +51,46 @@ function NavBar(props: { up: boolean; view: string }): JSX.Element {
           INIRU
         </Navbar.Brand>
         <Nav className="me-auto navbar-link">
-          <Nav.Link
-            onClick={() => {
-              navigate('/reward');
-            }}
-          >
-            Reward
-          </Nav.Link>
-          <Nav.Link href="https://iniru.github.io/portfolio-old">Old</Nav.Link>
+          {props.windowWidth <= 768
+            ? null
+            : state.isMenuList.map(
+                (
+                  data: {
+                    name: string;
+                    link?: string;
+                    redirect?: string;
+                  },
+                  i: number
+                ): JSX.Element => {
+                  return (
+                    <Nav.Link
+                      key={i}
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        if (data.link) {
+                          navigate(data.link);
+                        } else if (data.redirect) {
+                          navigate('/redirect', {
+                            state: { url: data.redirect },
+                          });
+                        }
+                      }}
+                    >
+                      {data.name}
+                    </Nav.Link>
+                  );
+                }
+              )}
         </Nav>
 
         <div className="d-flex gap-4 align-items-center h-100">
-          <Selector />
+          {props.windowWidth <= 768 ? null : <Selector />}
           <DarkModeSwitch
             className="nav-mode"
             checked={state.isDarkMode.value}
             onChange={toggleDarkMode}
           />
+          {props.windowWidth <= 768 ? <Menu /> : null}
         </div>
       </Navbar>
     </div>

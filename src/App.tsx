@@ -13,10 +13,12 @@ import About from './components/About';
 import Reward from './components/Reward';
 import Viewer from './components/Viewer';
 import Modal from './components/Modal';
+import Scroll from './components/Scroll';
 import './App.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from '.';
 import { setWarningModal } from './store';
+import Redirect from './components/Redirect';
 
 const Skill = lazy(() => import('./components/Skill'));
 const Repo = lazy(() => import('./components/Repositories'));
@@ -28,6 +30,7 @@ function App(): JSX.Element {
   let dispatch = useDispatch();
   let [up, setUp] = useState(false);
   let [view, setView] = useState('');
+  let [windowWidth, setWindowWidth] = useState(0);
 
   function Browser(): void {
     if (!(isSafari || isChrome || isEdge || isFirefox || isChromium)) {
@@ -35,7 +38,11 @@ function App(): JSX.Element {
     }
   }
 
-  function NavScrollEvent() {
+  function WindowWidth(): void {
+    setWindowWidth(window.innerWidth);
+  }
+
+  function NavScrollEvent(): void {
     let { pageYOffset } = window;
     if (pageYOffset >= 300) {
       setUp(true);
@@ -63,17 +70,20 @@ function App(): JSX.Element {
 
   useEffect(() => {
     window.addEventListener('scroll', NavScrollEvent);
+    window.addEventListener('resize', WindowWidth);
 
     return () => {
       window.removeEventListener('scroll', NavScrollEvent);
+      window.removeEventListener('resize', WindowWidth);
     };
-  }, [view]);
+  }, [view, windowWidth]);
 
   return (
     <div className="App">
       {state.isWarningModal.value ? <Modal /> : null}
       {state.isViewer.value ? <Viewer /> : null}
-      <NavBar up={up} view={view}></NavBar>
+      <Scroll />
+      <NavBar up={up} view={view} windowWidth={windowWidth}></NavBar>
       <Intro></Intro>
       <Routes>
         <Route
@@ -87,6 +97,7 @@ function App(): JSX.Element {
           }
         />
         <Route path="/reward" element={<Reward></Reward>} />
+        <Route path="/redirect" element={<Redirect />} />
       </Routes>
     </div>
   );
