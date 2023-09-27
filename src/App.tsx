@@ -44,16 +44,16 @@ function App(): JSX.Element {
   }
 
   function NavScrollEvent(): void {
-    let { pageYOffset } = window;
-    if (pageYOffset >= 300) {
+    let { scrollY } = window;
+    if (scrollY >= 300) {
       setUp(true);
 
-      if (pageYOffset - lastScrollTop <= -10 && view !== 'nav-view') {
+      if (scrollY - lastScrollTop <= -10 && view !== 'nav-view') {
         setView('nav-view');
-      } else if (pageYOffset > lastScrollTop && view === 'nav-view') {
+      } else if (scrollY > lastScrollTop && view === 'nav-view') {
         setView('nav-hide');
       }
-      lastScrollTop = pageYOffset <= 0 ? 0 : pageYOffset;
+      lastScrollTop = scrollY <= 0 ? 0 : scrollY;
     } else {
       if (view === 'nav-view') {
         setView('nav-hide');

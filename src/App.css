@@ -161,6 +161,7 @@ a {
 
 .navbar {
   background-color: var(--navbar-bg) !important;
+  height: inherit !important;
   position: absolute;
   z-index: 2;
   transform: translateY(0px);
@@ -670,6 +671,10 @@ a {
 }
 
 @media screen and (max-width: 768px) {
+  .navbar-container {
+    height: 54px;
+  }
+
   .navbar-brand {
     font-size: 18px !important;
   }
