@@ -16,12 +16,13 @@ import Modal from './components/Modal';
 import Scroll from './components/Scroll';
 import './App.css';
 import { useDispatch, useSelector } from 'react-redux';
-import { RootState } from '.';
+import { RootState } from './.';
 import { setWarningModal } from './store';
 import Redirect from './components/Redirect';
 
 const Skill = lazy(() => import('./components/Skill'));
 const Repo = lazy(() => import('./components/Repositories'));
+const Experience = lazy(() => import('./components/Experience'));
 const Footer = lazy(() => import('./components/Footer'));
 
 let lastScrollTop = 0;
@@ -94,6 +95,7 @@ function App(): JSX.Element {
               <About></About>
               <Skill></Skill>
               <Repo></Repo>
+              <Experience></Experience>
               <Footer></Footer>
             </>
           }
