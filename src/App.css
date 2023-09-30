@@ -118,6 +118,7 @@ a {
 
 .wmde-markdown code {
   color: var(--text-color);
+  padding: 0.25ch 0.6ch;
   font-family: 'Fira Code', sans-serif !important;
 }
 
