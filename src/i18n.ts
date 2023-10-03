@@ -68,7 +68,7 @@ i18n
             {
               year: 2023,
               title: '자신을 돌아보는 시간',
-              desc: '벌써 고등학교 3학년이 되었습니다. 빠르다면 빠른 시간이고 느리다면 느린 시간이겠죠. 고등학교 3학년은 제 자신을 돌아보는 시간이 가장 많았습니다. 내 꿈을 이루려면 무엇이 필요한가 나에게 무엇이 부족한가 생각을 하며 **`Next.Js`**, **`TypeScript`** 공부를 했습니다. 요즘 **CSR**에서 **SSR**로 유행이 점점 바뀌고 있는 가운데 **Front-End** 개발자도 **`Next.Js`** 를 배워야겠다는 생각을 많이 했습니다. 그래서 **`TypeScript`**, **`React`**, **`Next.Js`** 을 배워가며 가천대 디캐릭 수시 합격을 위한 **포트폴리오** 작업을 했습니다.<br/><br/>**`React`** 와 **`TypeScript`** 를 배우면서 재밌기도 했지만 힘든점도 많았습니다. **Type**지정 때문에 구글링을 매 시간마다 한 것 같습니다. 그래도 현재 **포트폴리오**를 완성하니 여태까지 제가 걸어온 길은 그래도 나쁘지 않았지만 그래도 조금만 더 노력했으면 좋았겠다는 생각했습니다. 그래도 후회는 없습니다. 전 열심히 연습하며 바뀌는 제 자신이 좋습니다.<br/><br/>더 앞으로 향해 달려나가겠습니다. 감사합니다.',
+              desc: '벌써 고등학교 3학년이 되었습니다. 빠르다면 빠른 시간이고 느리다면 느린 시간이겠죠. 고등학교 3학년은 제 자신을 돌아보는 시간이 가장 많았습니다. 내 꿈을 이루려면 무엇이 필요한가 나에게 무엇이 부족한가 생각을 하며 **`Next.Js`**, **`TypeScript`** 공부를 했습니다. 요즘 **CSR**에서 **SSR**로 유행이 점점 바뀌고 있는 가운데 **Front-End** 개발자도 **`Next.Js`** 를 배워야겠다는 생각을 많이 했습니다. 그래서 **`TypeScript`**, **`React`**, **`Next.Js`** 을 배워가며 **포트폴리오** 작업을 했습니다.<br/><br/>**`React`** 와 **`TypeScript`** 를 배우면서 재밌기도 했지만 힘든점도 많았습니다. **Type**지정 때문에 구글링을 매 시간마다 한 것 같습니다. 그래도 현재 **포트폴리오**를 완성하니 여태까지 제가 걸어온 길은 그래도 나쁘지 않았지만 그래도 조금만 더 노력했으면 좋았겠다는 생각했습니다. 그래도 후회는 없습니다. 전 열심히 연습하며 바뀌는 제 자신이 좋습니다.<br/><br/>더 앞으로 향해 달려나가겠습니다. 감사합니다.',
             },
           ],
         },
@@ -99,7 +99,7 @@ i18n
             {
               year: 2023,
               title: 'Time to reflect',
-              desc: "I'm already in my third year of high school. It's been a fast time and a slow time. My third year of high school has been the most reflective time for me. I've been studying **`Next.Js`** and **`TypeScript`**, thinking about what I need to fulfill my dreams and what I lack. As the trend is changing from **CSR** to **SSR**, I thought that **front-end** developers should also learn **`Next.Js`**. So, I learned **`TypeScript`**, **`React`**, and **`Next.Js`** while working on my **portfolio** to pass the Gachon University Dcarrick.<br/><br/>While learning **`React`** and **`TypeScript`**, I had a lot of fun, but I also had a lot of difficulties. I think I was Googling every hour because of the **type** designation. However, when I completed the current **portfolio**, I thought that the path I had taken so far was still not bad, but I still wished I had tried a little harder. I have no regrets, though. I like myself as I practice hard and change.<br/><br/>I'll keep pushing forward, thank you very much.",
+              desc: "I'm already in my third year of high school. It's been a fast time and a slow time. My third year of high school has been the most reflective time for me. I've been studying **`Next.Js`** and **`TypeScript`**, thinking about what I need to fulfill my dreams and what I lack. As the trend is changing from **CSR** to **SSR**, So I worked on my portfolio, learning TypeScript, React, and Next.Js.<br/><br/>While learning **`React`** and **`TypeScript`**, I had a lot of fun, but I also had a lot of difficulties. I think I was Googling every hour because of the **type** designation. However, when I completed the current **portfolio**, I thought that the path I had taken so far was still not bad, but I still wished I had tried a little harder. I have no regrets, though. I like myself as I practice hard and change.<br/><br/>I'll keep pushing forward, thank you very much.",
             },
           ],
         },
