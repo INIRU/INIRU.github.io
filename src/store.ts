@@ -37,6 +37,7 @@ let isWarningModal = createSlice({
 let isMenuList = createSlice({
   name: 'isMenuList',
   initialState: [
+    { name: 'Blog', redirect: 'https://blog.iniru.kr' },
     { name: 'Reward', link: '/reward' },
     { name: 'Old', redirect: 'https://iniru.github.io/portfolio-old' },
   ],
