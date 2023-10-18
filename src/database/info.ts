@@ -26,6 +26,7 @@ const info: Info = {
       level: 60,
     },
     { name: 'React', id: 'react', color: '#61DAFB', level: 80 },
+    { name: 'NextJS', id: 'nextjs', color: '#000000', level: 70 },
     { name: 'Node.Js', id: 'nodejs', color: '#339933', level: 50 },
     { name: 'Vue.Js', id: 'vuejs', color: '#4FC08D', level: 30 },
     { name: 'Python', id: 'python', color: '#3776AB', level: 100 },
